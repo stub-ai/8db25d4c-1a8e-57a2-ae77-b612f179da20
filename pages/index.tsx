@@ -1,13 +1,12 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import React from 'react';
+import Login from '../components/Login';
+import Dashboard from '../components/Dashboard';
 
-const inter = Inter({ subsets: ['latin'] })
+const Home = () => {
+  // Replace with actual authentication logic
+  const isAuthenticated = false;
 
-export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-    </main>
-  )
-}
+  return isAuthenticated ? <Dashboard /> : <Login />;
+};
+
+export default Home;
